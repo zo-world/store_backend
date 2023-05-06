@@ -8,14 +8,9 @@ app = Flask(__name__)
 def home():
     return "Hello from Flask"
 
-
-
 @app.get("/test")
 def test():
     return "This is another page"
-
-
-
 
 
 ###### API ENDPOINTS ########
@@ -26,15 +21,10 @@ def fix_id(obj):
     obj["_id"] = str(obj["_id"])
     return obj
 
-
-
-
 @app.get("/api/about")
 def about():
     me = { "name": "Yreish Pozo" }
     return json.dumps(me)
-
-
 
 @app.get("/api/catalog")
 def get_catalog():
@@ -44,7 +34,6 @@ def get_catalog():
         products.append(fix_id(prod))
 
     return json.dumps(products)
-
 
 @app.get("/api/total")
 def total_value():
