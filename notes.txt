@@ -24,11 +24,11 @@ venv\Scripts\activate
 sudo apt-get install python3.11-dev
 sudo apt-get install python3.11-venv
 
+# start flask server
+flask --app  server.py --debug run
+
 # install mongo and certifi
 python3 -m pip install flask flask_cors pymongo "pymongo[srv]" certifi
-
-
-
 
 ## GIT
 
